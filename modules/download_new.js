@@ -114,12 +114,12 @@ const downloadModule = async () => {
 
         // Try to make the "godot" folder - if it already exists, skip it.
         try {
-            await fs.mkdir('./godot/' + godotVersion + '/');
+            await fs.mkdir('../godot/' + godotVersion + '/');
         } catch(err) {
             console.log(`./godot/${godotVersion} exists, skipping mkdir...`);
         }
 
-        const godotFolder = './godot/' + godotVersion;
+        const godotFolder = '../godot/' + godotVersion;
         const response = await fetch(packageURL); // Get details about the file
         const totalSize = response.headers.get('content-length'); // Get size of the file
 
