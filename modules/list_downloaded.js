@@ -10,6 +10,8 @@ const __dirname = path.dirname(filename);
 
 // Medium Sized Function For Listing The Currently Installed Godot Versions (MSFLTCIGV)
 const listPackages = async () => {
+    console.clear();
+
     let installedVersions = []; // Keep track of the index of the user's choice
     let godotFiles = []; // Keep track of all the paths of the files
 

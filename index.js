@@ -6,7 +6,7 @@ import listPackages from './modules/list_downloaded.js';
 console.clear();
 
 // What does the user want to do?
-const whatToDo = cli({
+const whatToDo = await cli({
     type: 'select',
     name: 'selection',
     message: 'GVM (Godot Version Manager)',
@@ -25,5 +25,3 @@ const whatToDo = cli({
 
 if(whatToDo.selection == 'download') download();
 if(whatToDo.selection == 'listpackages') listPackages();
-
-console.clear();

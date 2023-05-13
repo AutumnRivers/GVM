@@ -20,6 +20,8 @@ const __dirname = path.dirname(filename);
 
 // Default export function
 const downloadModule = async () => {
+    console.clear();
+
     // Get list of Godot versions - this includes unsupported versions currently.
     // TODO: Change that
     const listVersions = async () => {
