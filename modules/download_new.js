@@ -114,7 +114,7 @@ const downloadModule = async () => {
 
         // Try to make the "godot" folder - if it already exists, skip it.
         try {
-            await fs.mkdir('../godot/' + godotVersion + '/');
+            await fs.mkdir(path.join(__dirname, '../godot/' + godotVersion + '/'));
         } catch(err) {
             console.log(`./godot/${godotVersion} exists, skipping mkdir...`);
         }
